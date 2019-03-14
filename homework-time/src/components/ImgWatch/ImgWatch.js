@@ -5,7 +5,7 @@ import  "./ImgWatch.css"
 const ImgWatch = function(props) {
 	const x = props.time;
     const styles = { 
-        transform: `rotate(${x}deg)` 
+        transform: `rotate(${x*30}deg)` 
     };
       return (
         <div className="ImgWatch">
