@@ -1,0 +1,11 @@
+.parentPop{
+    margin: 0 auto;
+}
+.className{
+    position: absolut;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    background-color: aquamarine;
+    z-index: 999;
+}

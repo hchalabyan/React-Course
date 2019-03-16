@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import Clock from "./Clock"
+import MainComponent from "../src/components/MainComponent/MainComponent"
+import Button from "../src/components/Button/Button" 
+
 
 import './App.css';
 
 import Watch from "../src/components/index"
 
 class App extends Component {
-  state = {
-    clicked: false
+  state={
+    showStatus:'block'
   }
-  deleteComponent = () => {
+  
+  close = ()=>{
     this.setState({
-        clicked: true
+      showStatus:'none'
     })
-}
+      
+    
+    
+  }
   render() {
     return (
       <div className="App">
-        <Watch/>
-        {this.state.clicked ? null : <Clock/>}
-        <button onClick={this.deleteComponent}>Click</button>
+      {/* <Watch/> */}
+        <MainComponent  status = {this.state.showStatus}/> 
+        <Button name = "close" click = {this.close}/>
       </div>
     );
   }
